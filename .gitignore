@@ -1,0 +1,37 @@
+# Dependencies
+/node_modules
+
+# Build output
+/dist
+/src-tauri/target
+
+# Database
+*.db
+
+# Story data (runtime-generated)
+/stories/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tauri generated
+src-tauri/gen/
+src-tauri/icons/android/
+src-tauri/icons/ios/
+
+# Misc
+*.pem
+*.tsbuildinfo
+.bitfun/
+.agents/
+/tmp
+/.bitfun/search/flashgrep-index/

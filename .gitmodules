@@ -1,0 +1,3 @@
+[submodule "reference/BitFun"]
+	path = reference/BitFun
+	url = git@github.com:GCWing/BitFun.git

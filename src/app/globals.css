@@ -1,0 +1,186 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Noto Sans SC', 'Source Han Sans CN', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Segoe UI', 'Microsoft YaHei UI', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'Source Han Mono CN', 'Noto Sans Mono CJK SC', 'JetBrains Mono', 'FiraCode', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, 'Cascadia Mono', 'Cascadia Code', Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-heading: var(--font-sans);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-element-bg-subtle: var(--element-bg-subtle);
+  --color-element-bg-soft: var(--element-bg-soft);
+  --color-element-bg-base: var(--element-bg-base);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-base: var(--border-base);
+  --shadow-xs: var(--shadow-xs-val);
+  --shadow-sm: var(--shadow-sm-val);
+  --shadow-base: var(--shadow-base-val);
+  --shadow-lg: var(--shadow-lg-val);
+  --shadow-xl: var(--shadow-xl-val);
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+}
+
+:root {
+  --background: #faf8f0;
+  --foreground: #1c1c1f;
+  --card: #faf8f0;
+  --card-foreground: #1c1c1f;
+  --popover: #f5f3e8;
+  --popover-foreground: #1c1c1f;
+  --primary: #2e5e8a;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f3e8;
+  --secondary-foreground: #3d3d3d;
+  --muted: rgba(46,94,138,0.06);
+  --muted-foreground: #6a6a6a;
+  --accent: rgba(46,94,138,0.08);
+  --accent-foreground: #2e5e8a;
+  --destructive: #c8102e;
+  --border: rgba(106,92,70,0.12);
+  --input: rgba(106,92,70,0.12);
+  --ring: #2e5e8a;
+  --radius: 0.625rem;
+
+  /* === BitFun 墨韵 Element 色板 (靛蓝淡底) === */
+  --element-bg-subtle: rgba(46, 94, 138, 0.03);
+  --element-bg-soft: rgba(46, 94, 138, 0.06);
+  --element-bg-base: rgba(46, 94, 138, 0.1);
+  --element-bg-medium: rgba(46, 94, 138, 0.14);
+  --element-bg-strong: rgba(46, 94, 138, 0.18);
+
+  /* === BitFun 墨韵 Border 细化 (赭褐) === */
+  --border-subtle: rgba(106, 92, 70, 0.12);
+  --border-base: rgba(106, 92, 70, 0.2);
+  --border-medium: rgba(106, 92, 70, 0.28);
+  --border-strong: rgba(106, 92, 70, 0.36);
+  --border-prominent: rgba(106, 92, 70, 0.48);
+
+  /* === BitFun 墨韵 Shadow (赭褐) === */
+  --shadow-xs-val: 0 1px 2px rgba(106, 92, 70, 0.06);
+  --shadow-sm-val: 0 2px 4px rgba(106, 92, 70, 0.08);
+  --shadow-base-val: 0 4px 8px rgba(106, 92, 70, 0.1);
+  --shadow-lg-val: 0 8px 16px rgba(106, 92, 70, 0.12);
+  --shadow-xl-val: 0 12px 24px rgba(106, 92, 70, 0.15);
+
+  /* === Static + Overlay === */
+  --color-static-white: #ffffff;
+  --color-static-black: #000000;
+  --color-overlay-slate-04: rgba(106, 92, 70, 0.04);
+  --color-overlay-slate-08: rgba(106, 92, 70, 0.08);
+  --color-overlay-slate-12: rgba(106, 92, 70, 0.12);
+
+  /* === BitFun 墨韵 Markdown 变量 === */
+  --md-inline-code-bg: rgba(0, 0, 0, 0.05);
+  --md-inline-code-border: rgba(0, 0, 0, 0.12);
+  --md-code-bg: color-mix(in srgb, #ffffff 92%, #faf8f0);
+  --md-code-toolbar-bg: color-mix(in srgb, #ffffff 86%, #faf8f0);
+  --md-pre-border: var(--border-subtle);
+  --md-blockquote-bg: rgba(106, 92, 70, 0.04);
+  --md-blockquote-border: rgba(106, 92, 70, 0.15);
+  --md-table-surface: #ffffff;
+  --md-table-border: rgba(106, 92, 70, 0.12);
+  --md-table-header-bg: #f6f8fa;
+  --md-table-header-fg: #0f172a;
+  --md-table-row-stripe: rgba(106, 92, 70, 0.04);
+  --md-table-row-hover: #eef4ff;
+  --md-table-shadow: 0 4px 14px rgba(106, 92, 70, 0.08);
+  --md-table-cell-border: rgba(106, 92, 70, 0.12);
+  --md-table-col-divider: rgba(106, 92, 70, 0.08);
+
+  /* === Scrollbar === */
+  --scrollbar-thumb: rgba(106, 92, 70, 0.15);
+  --scrollbar-thumb-hover: rgba(106, 92, 70, 0.25);
+}
+
+.dark {
+  --background: #1c1c1f;
+  --foreground: #e8e8e8;
+  --card: #212019;
+  --card-foreground: #e8e8e8;
+  --popover: #262626;
+  --popover-foreground: #e8e8e8;
+  --primary: #73a5cc;
+  --primary-foreground: #1c1c1f;
+  --secondary: #212019;
+  --secondary-foreground: #c5c3be;
+  --muted: #262626;
+  --muted-foreground: #928f89;
+  --accent: rgba(115,165,204,0.15);
+  --accent-foreground: #73a5cc;
+  --destructive: #e85555;
+  --border: rgba(232,232,232,0.16);
+  --input: rgba(232,232,232,0.16);
+  --ring: #73a5cc;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  * {
+    @apply border-border;
+  }
+  *:focus-visible {
+    @apply outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
+    font-size: 14px;
+    line-height: 1.58;
+  }
+}
+
+/* Stream cursor */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.stream-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #2e5e8a;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: cursor-blink 0.8s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
